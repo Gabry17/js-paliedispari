@@ -1,19 +1,19 @@
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
-const evenOrOdd = prompt('pari o dispari?');
-const addN = parseInt(prompt('inserire numero da 1 a 5'));
 
+let evenOrOdd;
 
-if(evenOrOdd === 'pari' || evenOrOdd === 'dispari'){
+do {
+    evenOrOdd = prompt('pari o dispari?');
     console.log(`scelta: ${evenOrOdd}`);
-} else {
-    alert('non hai selezionato pari o dispari');
-}
+} while (evenOrOdd !== 'pari' && evenOrOdd !== 'dispari');
 
-if(addN >= 1 && addN <= 5){
+let addN;
+
+do{
+    addN = parseInt(prompt('inserire numero da 1 a 5'));
     console.log(`numero: ${addN}`);
-} else {
-    alert('non hai selezionato un numero');
-}
+} while (addN < 1 || addN > 5);
+
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 let addNpc = numRandom(1,5);
